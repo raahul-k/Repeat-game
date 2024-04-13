@@ -1,0 +1,43 @@
+.landing {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-direction: column;
+}
+
+.heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.heading img {
+  width: 80px;
+  height: 80px;
+}
+
+.heading img:hover {
+  animation: hover-rotate 2s ease-out 0.5s infinite;
+}
+
+@keyframes hover-rotate {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  25% {
+    transform: rotateZ(180deg);
+  }
+
+  50% {
+    transform: rotateZ(90deg);
+  }
+
+  100% {
+    transform: rotateZ(360deg);
+  }
+}

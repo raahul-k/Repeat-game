@@ -1,0 +1,98 @@
+.tile {
+  width: 36px;
+  height: 50px;
+  background-color: rgba(24, 101, 101, 0.57);
+  border-radius: 8px;
+  border: none;
+  transition: all 0.5s;
+  transition: opacity 0.1s;
+  border-bottom: 4px solid rgba(7, 73, 16, 0.841);
+  border-right: 4px solid rgba(7, 73, 16, 0.841);
+}
+
+.tile:not([disabled]):hover {
+  opacity: 0.5;
+}
+
+.progress-bar {
+  background-color: rgba(128, 128, 128, 0.417);
+  height: 1rem;
+  border-radius: 10px;
+}
+
+.live-progress {
+  background-color: teal;
+  height: 1rem;
+  border-radius: 10px;
+  width: 0px;
+  transition: all 0.3s ease;
+}
+
+.game-container {
+  display: grid;
+  grid-gap: 0.5em;
+  position: relative;
+}
+
+@keyframes clickTile {
+  50% {
+    scale: 0.7;
+  }
+}
+
+.animation {
+  animation: clickTile 1s ease-in-out forwards;
+}
+
+.arena {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2em;
+  padding: 5rem 0 5em 0;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.back-btn {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+
+.arena-back-btn {
+  position: static;
+}
+
+.action-btns {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.winscreen {
+  position: absolute;
+  opacity: 1;
+  border-radius: 8px;
+  background-color: rgb(67, 192, 192);
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.winscreen h2 {
+  padding: 0 0.5rem;
+  text-align: center;
+}
+
+.play-again-btn {
+  z-index: 10;
+}
